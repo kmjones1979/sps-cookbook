@@ -25,6 +25,7 @@ fn map_contract(block: eth::v2::Block) -> Result<Contracts, substreams::errors::
     Ok(Contracts { contracts }) // return the contracts
 }
 
+
 #[substreams::handlers::map]
 pub fn graph_out(contracts: Contracts) -> Result<EntityChanges, substreams::errors::Error> {
     // hash map of name to a table
